@@ -1,0 +1,25 @@
+@red=#f66060;
+
+.transformRot(@rot)
+{
+	-webkit-transform: rotate(@rot);
+	-moz-transform: rotate(@rot);
+	-o-transform: rotate(@rot);
+	transform: rotate(@rot);
+}	
+
+.transformX(@rangeX)
+{
+	-webkit-transform: translateX(@rangeX);
+	-moz-transform: translateX(@rangeX);
+	-o-transform: translateX(@rangeX);
+	transform: translateX(@rangeX);
+}	
+
+.transition(@type ,@rangeS) 
+{
+	-webkit-transition: @type @rangeS ease-out;
+    -moz-transition: @type  @rangeS ease-out;
+    -o-transition: @type @rangeS ease-out;
+	transition: @type @rangeS ease-out;
+}

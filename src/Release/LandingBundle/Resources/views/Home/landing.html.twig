@@ -13,18 +13,59 @@
 {% endblock %}
 
 {% block section %}
-	<section>
-		<div id='mainHome'>
+	<div id='mainHome'>
+		<nav id='navHome'>
+			<ul class='navTrigger opened'>
+                <li class='line'></li>
+                <li class='line'></li>
+                <li class='line'></li>
+            </ul>
+            <ul class='button aboutUs'>
+            	<li>A propos de nous</li>
+            	<li class='arrow'> > </li>
+            </ul>
+            <ul class='button joinUs'>
+            	<li>Nous rejoindre</li>
+            	<li class='arrow'> > </li>
+            </ul>
+		</nav>
+		 <div class="slider">
+			<ul class="slides">
+				<li>
+					<img src='{{ asset("bundles/releaselanding/img/home.png") }}'> 
+					<div class="caption center-align">
+						<h4 class="light grey-text text-lighten-3">Alexander Savage c'est comme le verglas. <br/> Plus tu en as, plus tu t'étales.</h4>
+					</div>
+				</li>
+				<li>
+					<img src='{{ asset("bundles/releaselanding/img/home2.png") }}'> 
+					<div class="caption right-align">
+						<h3>Souvenir, souvenir</h3>
+						<h5 class="light grey-text text-lighten-3">C'est quand l'on se replonge dans le passé que l'on peux envisager l'avenir.</h5>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<div id='menuHome'>
-			<div id='recruitment'>
-			</div>
-			<div id='news'>
-			</div>
-			<div id='team'>
-			</div>
-		</div>
-	</section>
+	</div>
+	<nav id='menuHome'>
+		<ul id='recruitment'>
+			<li id='logo'></li>
+		</ul>
+		<ul id='news'>
+			<li class='imageHome valign-wrapper'>
+				<div class='imageIcone valign'>
+					<p>NEWS</p>
+				</div>
+			</li>
+		</ul>
+		<ul id='team'>
+			<li class='imageHome valign-wrapper'>
+				<div class='imageIcone valign'>
+					<p>TEAM</p>
+				</div>
+			</li>
+		</ul>
+	</nav>
 {% endblock %}
 
 {% block javascripts %}
