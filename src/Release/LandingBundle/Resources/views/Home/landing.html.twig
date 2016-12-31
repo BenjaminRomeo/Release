@@ -1,0 +1,27 @@
+{% extends "ReleaseLandingBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled2.css'
+		'bundles/releaselanding/less/landing.less'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block title %}
+  Accueil 
+{% endblock %}
+
+{% block section %}
+	<section>
+		YO
+	</section>
+{% endblock %}
+
+{% block javascripts %}
+	{% javascripts filter='?yui_js'
+		'bundles/releaselanding/js/landing.js' 
+	%}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}

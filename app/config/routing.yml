@@ -1,0 +1,3 @@
+releaseLanding:
+    resource: "@ReleaseLandingBundle/Resources/config/routing.yml"
+    prefix:   /
