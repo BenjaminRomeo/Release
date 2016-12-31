@@ -98,70 +98,7 @@
 	{
 		height: 100%;
 		width: 100%;
-		padding: 30px 30px 30px 30px;
 		float: left;
-
-		.navTrigger 
-		{
-			width: 51px;
-			height: 51px;
-			float:left;
-			cursor: pointer;
-			position:absolute;
-			border: white solid 3px;
-			z-index: 100;
-		}
-
-		.line 
-		{
-			display: block;
-			position: relative;
-			width: 27px;
-			height: 4px;
-			background: white;
-			left: 9px;
-			transition: all 0.7s ease 0s;
-		}
-
-		.opened 
-		{
-			.line:nth-child(1)
-			{
-				top:11px;
-				.transformRot(0deg);
-			}
-			.line:nth-child(2)
-			{
-				top:17px;
-				opacity: 1;	
-			}
-			.line:nth-child(3)
-			{
-				top:23px;	
-				.transformRot(0deg);
-			}
-		}
-
-		.closed 
-		{
-			.line:nth-child(1) 
-			{
-				.transformRot(-45deg);
-				top:21px;
-			}
-			.line:nth-child(2) 
-			{
-				top:17px;
-				opacity: 0;
-			}
-			.line:nth-child(3) 
-			{
-				.transformRot(45deg);
-				top:13px;
-			}
-
-		}
-
 	}
 }
 
@@ -188,15 +125,47 @@
 		}
 	}
 
-	p
+	.showSub
 	{
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
-		color: white;
-		font-weight: bold;
-		font-size: 2em;
+		width: 100%;
+		height: 100%;
+		display: table;
+		opacity: 1;
+		.transformY(0%);
+		.transition(all, 0.3s);
 
+		p
+		{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			font-size: 2em;
+		}
+	}
+
+	.hiddenSub
+	{
+		display: table;
+		position: relative;
+		top: -50%;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		.transformY(0%);
+		.transition(all, 0.3s);
+		line-height: 15px;
+
+		p
+		{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			font-size: 1em;
+		}
 	}
 
 	#news
@@ -204,6 +173,7 @@
 		height: 30%;
 		width: 100%;
 		background: linear-gradient(to right, #eca534, @red);
+		overflow: hidden;
 		cursor: pointer;
 
 		.imageHome
@@ -212,14 +182,47 @@
 			width: 100%;
 			background: url('../img/news.png') no-repeat right bottom;
 			background-size: 80%;
+		}
 
+		.innerSub
+		{
+			height: 100%;
+			width: 100%;
+			position: relative;
+			top: -100%;
 			.imageIcone
 			{
 				height: 80%;
 				width: 100%;
 				background: url('../img/iconeNews.png') no-repeat center;
 				background-size: contain;
-				display: table;
+			}
+		}
+
+		&:hover
+		{
+			.imageHome
+			{
+				.transformS(1.2,1.2);
+				.transition(all, 5s);
+			}
+
+			.innerSub
+			{
+				background-color: rgba(0,0,0,0.5);
+				.showSub
+				{
+					opacity: 0;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
+
+				.hiddenSub
+				{
+					opacity: 1;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
 			}
 		}
 	}
@@ -229,6 +232,7 @@
 		height: 30%;
 		width: 100%;
 		background: linear-gradient(to right, #36547a, #4d7e42);
+		overflow: hidden;
 		cursor: pointer;
 
 		.imageHome
@@ -236,16 +240,51 @@
 			height: 100%;
 			width: 100%;
 			background: url('../img/team.png') no-repeat center bottom;
-			background-size: 80%;
+			.transformS(1,1);
+			.transition(transform, 0.3s);
+			background-size: contain;		
+		}
 
+		.innerSub
+		{
+			height: 100%;
+			width: 100%;
+			position: relative;
+			top: -100%;
 			.imageIcone
 			{
-				
 				height: 50%;
 				width: 100%;
 				background: url('../img/iconeTeam.png') no-repeat center;
 				background-size: contain;
-				display: table;
+			}
+		}
+
+		&:hover
+		{
+			.imageHome
+			{
+				.transformS(1.2,1.2);
+				.transition(all, 5s);
+			}
+
+			.innerSub
+			{
+				background-color: rgba(0,0,0,0.5);
+
+				.showSub
+				{
+					opacity: 0;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
+
+				.hiddenSub
+				{
+					opacity: 1;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
 			}
 		}
 	}

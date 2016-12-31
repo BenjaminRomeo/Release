@@ -16,6 +16,22 @@
 	transform: translateX(@rangeX);
 }	
 
+.transformY(@rangeY)
+{
+	-webkit-transform: translateY(@rangeY);
+	-moz-transform: translateY(@rangeY);
+	-o-transform: translateY(@rangeY);
+	transform: translateY(@rangeY);
+}	
+
+.transformS(@A, @B) 
+{
+	-webkit-transform: scale(@A, @B);
+    -moz-transform: scale(@A, @B);
+    -o-transform: scale(@A, @B);
+	transform: scale(@A, @B);
+}
+
 .transition(@type ,@rangeS) 
 {
 	-webkit-transition: @type @rangeS ease-out;

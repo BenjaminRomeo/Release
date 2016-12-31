@@ -1,2 +1,69 @@
 /* CSS Document */
 @import 'definition.less';
+
+header
+{
+
+	position: fixed;
+	float: left;
+	z-index: 100000;
+
+	.navTrigger 
+	{
+		width: 51px;
+		height: 51px;
+		cursor: pointer;
+		position:absolute;
+		border: white solid 3px;
+		margin: 30px 0px 0px 30px;
+		
+		.line 
+		{
+			display: block;
+			position: relative;
+			width: 27px;
+			height: 4px;
+			background: white;
+			left: 9px;
+			transition: all 0.7s ease 0s;
+		}
+	}
+
+	.opened 
+	{
+		.line:nth-child(1)
+		{
+			top:11px;
+			.transformRot(0deg);
+		}
+		.line:nth-child(2)
+		{
+			top:17px;
+			opacity: 1;	
+		}
+		.line:nth-child(3)
+		{
+			top:23px;	
+			.transformRot(0deg);
+		}
+	}
+
+	.closed 
+	{
+		.line:nth-child(1) 
+		{
+			.transformRot(-45deg);
+			top:21px;
+		}
+		.line:nth-child(2) 
+		{
+			top:17px;
+			opacity: 0;
+		}
+		.line:nth-child(3) 
+		{
+			.transformRot(45deg);
+			top:13px;
+		}
+	}
+}
