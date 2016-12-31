@@ -14,3 +14,7 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+
+var/cache/.gitkeep
+var/sessions/.gitkeep
+var/logs/.gitkeep
