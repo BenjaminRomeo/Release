@@ -18,3 +18,4 @@
 var/cache/.gitkeep
 var/sessions/.gitkeep
 var/logs/.gitkeep
+web/bundles/releaselanding/js/landing.js
