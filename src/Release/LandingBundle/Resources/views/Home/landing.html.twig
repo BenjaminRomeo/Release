@@ -1,7 +1,7 @@
 {% extends "ReleaseLandingBundle::layout.html.twig" %}
 
 {% block stylesheets %}
-	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled2.css'
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled.css'
 		'bundles/releaselanding/less/landing.less'
 	%}
 	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
@@ -14,7 +14,16 @@
 
 {% block section %}
 	<section>
-		
+		<div id='mainHome'>
+		</div>
+		<div id='menuHome'>
+			<div id='recruitment'>
+			</div>
+			<div id='news'>
+			</div>
+			<div id='team'>
+			</div>
+		</div>
 	</section>
 {% endblock %}
 
