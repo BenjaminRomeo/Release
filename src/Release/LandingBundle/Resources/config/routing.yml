@@ -1,3 +1,7 @@
+releaseLanding_teamPage:
+    path:    /team/
+    defaults: { _controller: ReleaseLandingBundle:Home:team }
+
 releaseLanding_homePage:
     path:    /
     defaults: { _controller: ReleaseLandingBundle:Home:index }
