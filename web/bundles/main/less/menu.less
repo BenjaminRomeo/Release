@@ -3,19 +3,26 @@
 
 header
 {
-
-	position: fixed;
+	height: 100%;
+	width: 35%;
+	position: relative;
 	float: left;
 	z-index: 100000;
+	left: -35%;
 
 	.navTrigger 
 	{
+		display: block;
 		width: 51px;
 		height: 51px;
 		cursor: pointer;
-		position:absolute;
+		position:fixed;
 		border: white solid 3px;
 		margin: 30px 0px 0px 30px;
+		.transition(all, 0.3s);
+		top: 0px;
+    	left: 0px;
+    	z-index: 100000;
 		
 		.line 
 		{
@@ -23,11 +30,25 @@ header
 			position: relative;
 			width: 27px;
 			height: 4px;
-			background: white;
+			background-color: white;
 			left: 9px;
-			transition: all 0.7s ease 0s;
+			.transition(all, 0.3s);
+		}
+
+		&:hover
+		{
+			background-color: white;
+			.transition(all, 0.3s);
+
+			.line
+			{
+				background-color: @red;
+				.transition(all, 0.3s);
+			}
 		}
 	}
+
+	
 
 	.opened 
 	{
@@ -65,5 +86,284 @@ header
 			.transformRot(45deg);
 			top:13px;
 		}
+	}
+	
+	#menu
+	{
+		height: 100%;
+		width: 100%;
+
+		#mainMenu
+		{
+			height: 100%;
+			width: 100%;
+
+			.row
+			{
+				width: 100%;
+				margin-bottom: 0px;
+				float: none;
+				margin: 0;
+				cursor: pointer;
+
+				&:hover
+				{	
+					.innerMenu
+					{
+						background-color: rgba(0,0,0,0.6);
+						.transition(all, 0.5s);
+					}
+				}
+			}
+
+			.col
+			{
+				height: 100%;
+				overflow: hidden;
+			}
+
+			.innerMenu
+			{
+				background-color: rgba(0,0,0,0);
+				.transition(all, 0.5s);
+
+				.showBigMenu
+				{
+					height: 100%;
+					width:100%;
+					display: table;
+					.transition(all, 0.5s);
+					.transformY(0%);
+
+					p
+					{
+						text-align: center;
+						display:table-cell;
+						vertical-align: middle;
+						float: none;
+						font-size: 2em;
+						font-weight: bold;
+					}
+				}
+
+				.hideBigMenu
+				{
+					position: relative;
+					top: -35%;
+					opacity: 0;
+					height: 100%;
+					width:100%;
+					display: table;
+					.transition(all, 0.5s);
+					.transformY(0%);
+
+					p
+					{
+						display:block;	
+						line-height: 25px;		
+						text-align: center;
+						vertical-align: middle;
+						font-size: 1.2em;
+						font-weight: bold;
+						float: none;	
+					}
+				}
+
+				&:hover
+				{
+					.hideBigMenu
+					{
+						opacity: 1;
+						.transformY(-10%);
+						.transition(all, 0.5s);
+						p
+						{
+								
+						}
+					}
+
+					.showBigMenu
+					{
+						.transition(all, 0.5s);
+						.transformY(-3%);
+					}
+
+				}
+			}
+
+			.smallRow
+			{
+				height: 90px;
+
+				@media(max-width: 992px)
+				{
+					height: 120px;
+
+					.col
+					{
+						height: 60px;
+					}
+				}
+			}
+
+			.homeLink
+			{
+				height: ~'calc(34% - 30px)';
+				width: 100%;
+				background-color: #870202;
+
+				@media(max-width: 992px)
+				{
+					height: ~'calc(34% - 40px)';
+				}
+			}
+
+			.forumLink
+			{
+				height: ~'calc(33% - 30px)';
+				width: 100%;
+				background-color: #9b0202;
+
+				@media(max-width: 992px)
+				{
+					height: ~'calc(33% - 40px)';
+				}
+			}
+
+			.galerieLink
+			{
+				height: ~'calc(33% - 30px)';
+				width: 100%;
+				background-color: #c50000;
+
+				@media(max-width: 992px)
+				{
+					height: ~'calc(33% - 40px)';
+				}
+			}
+
+			.ressource
+			{
+				background-color: #0b0b0b;
+				font-size: 1em;
+				text-align: center;
+				font-weight: bold;
+
+				span 
+				{
+					display: table;
+					height: 100%;
+					width: 100%;
+					color: white;
+					.transition(all, 0.5s);
+
+					p
+					{
+						display: table-cell;
+						vertical-align: middle;
+					}
+
+					&:hover
+					{
+						color: #4c4c4c;
+						.transition(all, 0.5s);
+					}
+				}
+			}
+
+			.fflog
+			{
+				background-color: #0f0f0f;
+				padding: 5px 5px 5px 5px;
+				margin: 0;
+
+				span
+				{
+					height: 100%;
+					width: 100%;
+					max-width: 150px;
+					text-align: center;
+					margin: 0 auto;
+					display: block;
+					background: url('../img/fflog.png') no-repeat center;
+					background-size: contain;
+					filter: grayscale(0%);
+					.transition(all, 0.5s);
+
+					&:hover
+					{
+						filter: grayscale(100%);
+						.transition(all, 0.5s);
+					}
+				}
+			}
+
+			.register
+			{
+				background-color: #0980ac;
+				.transition(all, 0.5s);
+				padding: 0;
+				div
+				{
+					text-align: center;
+					position: relative;
+					top: 5px;
+					line-height: normal;
+
+					i 
+					{
+						font-size: 40px;
+						height: 45px;
+						width: 100%;
+					}
+
+					p 
+					{
+						line-height: 37px;
+						font-size: 0.8em;
+					}
+				}
+
+				&:hover
+				{
+					background-color: #1190ac;
+					.transition(all, 0.5s);
+				}
+			}
+
+			.login
+			{
+				background-color: #3333cc;
+				.transition(all, 0.5s);
+				padding: 0;
+
+				div
+				{
+					text-align: center;
+					position: relative;
+					top: 5px;
+					line-height: normal;
+
+					i 
+					{
+						font-size: 40px;
+						height: 45px;
+						width: 100%;
+					}
+
+					p 
+					{
+						line-height: 37px;
+						font-size: 0.8em;
+					}
+				}
+
+				&:hover
+				{
+					background-color: #4444cc;
+					.transition(all, 0.5s);
+				}
+			}
+		}	
 	}
 }

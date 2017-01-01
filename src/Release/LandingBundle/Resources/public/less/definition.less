@@ -1,4 +1,5 @@
 @red=#f66060;
+@green=#4d7e42;
 
 .transformRot(@rot)
 {
@@ -32,10 +33,11 @@
 	transform: scale(@A, @B);
 }
 
-.transition(@type ,@rangeS) 
+.transition(@type, @rangeS) 
 {
-	-webkit-transition: @type @rangeS ease-out;
-    -moz-transition: @type  @rangeS ease-out;
-    -o-transition: @type @rangeS ease-out;
-	transition: @type @rangeS ease-out;
+	-webkit-transition: @type @rangeS ease;
+    -moz-transition: @type  @rangeS ease;
+    -o-transition: @type @rangeS ease;
+	transition: @type @rangeS ease;
 }
+
