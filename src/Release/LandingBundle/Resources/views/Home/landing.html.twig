@@ -1,7 +1,7 @@
 {% extends "ReleaseLandingBundle::layout.html.twig" %}
 
 {% block stylesheets %}
-	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled2.css'
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled.css'
 		'bundles/releaselanding/less/landing.less'
 	%}
 	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
@@ -13,9 +13,115 @@
 {% endblock %}
 
 {% block section %}
-	<section>
-		YO
-	</section>
+	<div id='mainHome'>
+		<nav id='navHome'>
+            <ul class='button aboutUs'>
+            	<li>A propos de nous</li>
+            	<li class='arrow'> > </li>
+            </ul>
+            <ul class='button joinUs'>
+            	<li>Nous rejoindre</li>
+            	<li class='arrow'> > </li>
+            </ul>
+		</nav>
+		 <div class="slider">
+			<ul class="slides">
+				<li>
+					<img src='{{ asset("bundles/releaselanding/img/home.png") }}'> 
+					<div class="caption center-align">
+						<h4 class="light grey-text text-lighten-3">Alexander Savage c'est comme le verglas. <br/> Plus tu en as, plus tu t'étales.</h4>
+					</div>
+				</li>
+				<li>
+					<img src='{{ asset("bundles/releaselanding/img/home2.png") }}'> 
+					<div class="caption right-align">
+						<h3>Souvenir, souvenir</h3>
+						<h5 class="light grey-text text-lighten-3">C'est quand l'on se replonge dans le passé que l'on peux envisager l'avenir.</h5>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<nav id='menuHome'>
+		<ul id='recruitment'>
+			<span id='logo'></span>
+			<div id='sectionRecruitment'>
+				<div id='containerRecruitment'>
+					<table class="tg hide-on-small-only">
+					  	<tr>
+					    	<th colspan="8">RECRUTEMENT</th>
+					  	</tr>
+					  	<tr>
+					    	<td class="role" colspan="4">TANK</td>
+					    	<td class="role" colspan="4">HEAL</td>
+					  	</tr>
+					  	<tr>
+					    	<td class="icone">Icone</td>
+					    	<td class="stClose">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					  	</tr>
+					  	<tr>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					  	</tr>
+					  	<tr>
+					    	<td class="role" colspan="4">MELE</td>
+					    	<td class="role" colspan="4">DISTANT</td>
+					  	</tr>
+					  	<tr>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					  	</tr>
+					  	<tr>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">Icone</td>
+					    	<td class="stOpen">Ouvert</td>
+					  	</tr>
+					</table>
+				</div>
+			</div>
+		</ul>
+		<ul id='news'>
+			<li class='imageHome valign-wrapper'></li>
+			<li class='innerSub valign-wrapper'>
+				<div class='imageIcone valign'>
+					<div class='showSub'><p>NEWS</p></div>
+					<div class='hiddenSub'><p>Un progress à venir ou un nouveau chalenge relevé.<br/> Vous saurez tous ici.</p></div>
+				</div>
+			</li>
+		</ul>
+		<ul id='team'>
+			<li class='imageHome valign-wrapper'></li>
+			<li class='innerSub valign-wrapper'>
+				<div class='imageIcone valign'>
+					<div class='showSub'><p>TEAM</p></div>
+					<div class='hiddenSub'><p>Retrouvez toutes les informations sur les membres de notre équipe!</p></div>
+				</div>
+			</li>
+		</ul>
+	</nav>
 {% endblock %}
 
 {% block javascripts %}

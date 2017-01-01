@@ -1,0 +1,331 @@
+@import 'definition.less';
+
+#mainHome
+{
+	width: 65%;
+	height: 100%;
+	float:left;
+
+	li
+	{
+	 	background-repeat: norepeat;
+	    -webkit-animation: myfirst 20s; 
+	    animation: myfirst 2000;
+	    animation-play-state: running;
+	    -webkit-animation-play-state: running;
+	}
+
+	.slider
+	{
+		height:100%;
+
+		.indicators
+		{
+			z-index: 100;
+
+			.active
+			{
+				background-color: @red;
+			}
+		}
+	}
+
+	.button
+	{
+		width: 200px;
+		height: 40px;
+		border: 3px white solid;
+		display: block;
+		position: absolute;
+		bottom: 30px;
+		z-index:100;
+		display: table;
+		cursor: pointer;
+		.transition(all, 0.3s);
+		background-color: rgba(0,0,0,0.3);
+		overflow: hidden;
+
+		li
+		{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.2em;
+    		height: 100%;
+    		width: 100%;
+    		font-size: 12px;
+    		.transition(all, 0.3s);
+		}
+
+		.arrow
+		{
+			position: absolute;
+			left: 60px;
+			.transformX(0px); 
+			.transition(all, 0.3s);
+		}
+
+		&:hover
+		{
+			background-color: white;
+			.transition(all, 0.3s);
+
+			li
+			{
+				color:@red;
+				.transition(all, 0.3s);
+			}
+
+			.arrow
+			{
+				.transformX(15px); 
+				.transition(all, 0.3s);
+			}
+		}
+	}
+
+	.aboutUs
+	{
+		left: 30px;
+	}
+
+	.joinUs
+	{
+		right: ~'calc(35% + 30px)';
+	}
+
+	#navHome
+	{
+		height: 100%;
+		width: 100%;
+		float: left;
+	}
+}
+
+#menuHome
+{
+	display: block;
+	width: 35%;
+	height: 100%;
+	float: right;
+
+	#recruitment
+	{
+		height: 40%;
+		width: 100%;
+		background-color: #383838;
+
+		#logo
+		{
+			display: block;
+			width: 100%;
+			height: 20%;
+			background: url('../img/release.png') no-repeat bottom center;
+			background-size: contain;
+		}
+
+		#sectionRecruitment
+		{
+			height: 80%;
+			width: 100%;
+			background: linear-gradient(to bottom, #383838, #797979);
+
+			#containerRecruitment
+			{
+				height: 100%;
+				width: 100%;
+				background: url('../img/recruitment.png') no-repeat top center;
+				background-size: contain;
+				padding: 15px 15px 15px 15px;
+			}
+		}
+	}
+
+	.showSub
+	{
+		width: 100%;
+		height: 100%;
+		display: table;
+		opacity: 1;
+		.transformY(0%);
+		.transition(all, 0.3s);
+
+		p
+		{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			font-size: 2em;
+		}
+	}
+
+	.hiddenSub
+	{
+		display: table;
+		position: relative;
+		top: -50%;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		.transformY(0%);
+		.transition(all, 0.3s);
+		line-height: 15px;
+
+		p
+		{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			font-size: 1em;
+		}
+	}
+
+	#news
+	{
+		height: 30%;
+		width: 100%;
+		background: linear-gradient(to right, #eca534, @red);
+		overflow: hidden;
+		cursor: pointer;
+
+		.imageHome
+		{
+			height: 100%;
+			width: 100%;
+			background: url('../img/news.png') no-repeat right bottom;
+			background-size: 80%;
+		}
+
+		.innerSub
+		{
+			height: 100%;
+			width: 100%;
+			position: relative;
+			top: -100%;
+			.imageIcone
+			{
+				height: 80%;
+				width: 100%;
+				background: url('../img/iconeNews.png') no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		&:hover
+		{
+			.imageHome
+			{
+				.transformS(1.2,1.2);
+				.transition(all, 5s);
+			}
+
+			.innerSub
+			{
+				background-color: rgba(0,0,0,0.5);
+				.showSub
+				{
+					opacity: 0;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
+
+				.hiddenSub
+				{
+					opacity: 1;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
+			}
+		}
+	}
+
+	#team
+	{
+		height: 30%;
+		width: 100%;
+		background: linear-gradient(to right, #36547a, @green);
+		overflow: hidden;
+		cursor: pointer;
+
+		.imageHome
+		{
+			height: 100%;
+			width: 100%;
+			background: url('../img/team.png') no-repeat center bottom;
+			.transformS(1,1);
+			.transition(transform, 0.3s);
+			background-size: contain;		
+		}
+
+		.innerSub
+		{
+			height: 100%;
+			width: 100%;
+			position: relative;
+			top: -100%;
+			.imageIcone
+			{
+				height: 50%;
+				width: 100%;
+				background: url('../img/iconeTeam.png') no-repeat center;
+				background-size: contain;
+			}
+		}
+
+		&:hover
+		{
+			.imageHome
+			{
+				.transformS(1.2,1.2);
+				.transition(all, 5s);
+			}
+
+			.innerSub
+			{
+				background-color: rgba(0,0,0,0.5);
+
+				.showSub
+				{
+					opacity: 0;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
+
+				.hiddenSub
+				{
+					opacity: 1;
+					.transformY(-50%);
+					.transition(all, 0.3s);
+				}
+			}
+		}
+	}
+}
+
+table
+{
+	line-height: 4px;
+	height: 100%;
+	width: 100%;
+	display: none;
+
+	th, td
+	{
+		text-align: center;
+	}
+
+	.stOpen
+	{
+		color: @green;
+	}
+
+	.stClose
+	{
+		color: @red;
+	}
+}

@@ -22,12 +22,14 @@
 			Attention, Javascript est désactivé.
         </noscript>
 
-        {{ include("Global/menu.html.twig") }}
-        	<div class='masterContainer'>
-	        	<div class='main'>
-					{% block body %}
-						
-					{% endblock %}
+        	<div id='masterContainer'>
+        		<div id='container'>
+	        		{{ include("Global/menu.html.twig") }}
+		        	<div id='main'>
+						{% block body %}
+							
+						{% endblock %}
+					</div>
 				</div>
 			</div>
 	    <footer>

@@ -1,0 +1,43 @@
+@red=#f66060;
+@green=#4d7e42;
+
+.transformRot(@rot)
+{
+	-webkit-transform: rotate(@rot);
+	-moz-transform: rotate(@rot);
+	-o-transform: rotate(@rot);
+	transform: rotate(@rot);
+}	
+
+.transformX(@rangeX)
+{
+	-webkit-transform: translateX(@rangeX);
+	-moz-transform: translateX(@rangeX);
+	-o-transform: translateX(@rangeX);
+	transform: translateX(@rangeX);
+}	
+
+.transformY(@rangeY)
+{
+	-webkit-transform: translateY(@rangeY);
+	-moz-transform: translateY(@rangeY);
+	-o-transform: translateY(@rangeY);
+	transform: translateY(@rangeY);
+}	
+
+.transformS(@A, @B) 
+{
+	-webkit-transform: scale(@A, @B);
+    -moz-transform: scale(@A, @B);
+    -o-transform: scale(@A, @B);
+	transform: scale(@A, @B);
+}
+
+.transition(@type, @rangeS) 
+{
+	-webkit-transition: @type @rangeS ease;
+    -moz-transition: @type  @rangeS ease;
+    -o-transition: @type @rangeS ease;
+	transition: @type @rangeS ease;
+}
+
