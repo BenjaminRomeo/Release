@@ -10,4 +10,9 @@ class HomeController extends Controller
     {
         return $this->render('ReleaseLandingBundle:Home:landing.html.twig');
     }
+
+    public function teamAction()
+    {
+        return $this->render('ReleaseLandingBundle:Home:team.html.twig');
+    }
 }
