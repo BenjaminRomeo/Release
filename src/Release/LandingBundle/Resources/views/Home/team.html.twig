@@ -1,0 +1,26 @@
+{% extends "ReleaseLandingBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled.css'
+		'bundles/releaselanding/less/team.less'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block title %}
+	Notre équipe 
+{% endblock %}
+
+{% block section %}
+	<div class='teamContainer'>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{% javascripts filter='?yui_js'
+		'bundles/releaselanding/js/team.js' 
+	%}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
