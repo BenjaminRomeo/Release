@@ -1,9 +1,167 @@
 @import 'definition.less';
 
-.teamContainer
+section
 {
-	background-color: blue;
-	height: 150%;
+	background: linear-gradient(to bottom, #f1b500, #f17d00);
+	height: 100%;
 	width: 100%;
 
+	.teamContainer
+	{
+		background: url('../img/Team/teamSection.png') no-repeat center bottom;
+		background-size: contain;
+		height: 100%;
+		width: 100%;
+
+		.lineContainer
+		{
+			position: relative;
+			top: 110px;
+			font-size : 0;
+
+			.lineUp
+			{
+				display: inline-block;
+				height: 100px;
+				width: 0px;
+				.border(5px, 0px, 0px, 0px, @red);
+				.transition(border-color, 0.5s);
+			}
+
+			.lineObl
+			{
+				display: inline-block;
+				height: 0px;
+				width: 200px;
+				position: absolute;
+				transform-origin: 100% 0%;
+				.border(0px, 10px, 0px, 0px, @red);
+				.transition(border-color, 0.5s);
+				-ms-transform: skewX(55deg); 
+                -webkit-transform: skewX(55deg); 
+    			transform: skewX(55deg);
+			}
+
+			.lineDown
+			{
+				display: inline-block;
+				height: 100px;
+				width: 0px;
+				position: relative;
+				.border(5px, 0px, 0px, 0px, @red);
+				.transition(border-color, 0.5s);
+				top: 140px;
+				left:200px;
+			}
+
+			.mchLine
+			{
+				border-color:#7e5000;
+				.transition(border-color, 0.5s);
+			}
+		}
+
+		.playerContainer
+		{
+			height: 200px;
+			width: 150px;
+			background-color: orange;
+			position: absolute;
+			cursor: pointer;
+		}
+
+		.player1
+		{
+			top: 25px;
+			left: ~'calc(50% + 120px)';
+		}
+
+		.player2
+		{
+			top: 25px;
+			left: ~'calc(50% + 300px)';
+		}
+
+		.player3
+		{
+			top: 210px;
+			left: ~'calc(50% - 160px)';
+		}
+
+		.player4
+		{
+			top: 280px;
+			left: ~'calc(50% + 20px)';
+		}
+
+		.player5
+		{
+			top: 280px;
+			left: ~'calc(50% + 200px)';
+		}
+
+		.player6
+		{
+			top: 280px;
+			left: ~'calc(50% + 380px)';
+		}
+
+		.player7
+		{
+			top: 510px;
+			left: ~'calc(50% + 110px)';
+		}
+
+		.machinist
+		{
+			top: 510px;
+			left: ~'calc(50% + 290px)';
+		}
+
+		.teamText
+		{
+			width: 350px;
+			text-align: justify;
+			position: absolute;
+			bottom: 350px;
+			left: 5%;
+			color: black;
+			.transition(color, 0.5s);
+		}
+
+		.mchText
+		{
+			color: white;
+			.transition(color, 0.5s);
+		}
+	}
+
+	.classContainer
+	{
+		display: none;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+    	top: 0px;	
+    	opacity: 0;
+    	overflow: hidden;
+
+    	.machinistLogo
+		{
+			position: absolute;
+			bottom: -20px;
+			left: 150px;
+			height: 80%;
+			width: 80%;
+			background: url('../img/Team/machinistLogo.png') no-repeat left;
+			background-size: contain;
+		}
+	}
+
+	.machinistBack
+	{
+		background: url('../img/Team/machinistBack.png') no-repeat center center;
+		background-size: cover;
+	}
 }
+
