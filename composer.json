@@ -28,7 +28,10 @@
         "leafo/scssphp": "~0.6",
         "patchwork/jsqueeze": "~1.0",
         "leafo/lessphp": "0.3.9",
-        "flesler/jquery.scrollto": "*"
+        "flesler/jquery.scrollto": "*",
+        "knplabs/knp-paginator-bundle": "2.5.3",
+        "discutea/forum-bundle": "1.0.4",
+        "friendsofsymfony/user-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
