@@ -18,7 +18,7 @@ class LoadUser implements FixtureInterface
       $user = new User;
 
       $user->setUsername($name);
-      $user->setPassword('lol');
+      $user->setPassword($encoder->encodePassword('lol', ''));
       $user->setEmail('asto@lol.fr');
       $user->setSalt('');
       $user->setRoles(array('ROLE_ADMIN'));

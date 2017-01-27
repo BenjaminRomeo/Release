@@ -19,14 +19,16 @@
                 </a>
             </li>
             <li class='row forumLink'>
-                <div class="col s12 innerMenu">
-                    <div class='showBigMenu'>
-                        <p>FORUM</p>
+                <a href='{{ path("discutea_forum_homepage") }}'>
+                    <div class="col s12 innerMenu">
+                        <div class='showBigMenu'>
+                            <p>FORUM</p>
+                        </div>
+                        <div class='hideBigMenu'>
+                            <p class='descHiden'>Créons, partageons enssemble</p>
+                        </div>
                     </div>
-                    <div class='hideBigMenu'>
-                        <p class='descHiden'>Créons, partageons enssemble</p>
-                    </div>
-                </div>
+                </a>
             </li>
             <li class='row galerieLink'>
                 <div class="col s12 innerMenu">
@@ -47,18 +49,44 @@
                         <span></span>
                     </a>
                 </li>
-                <li class="col s6 l2 register">
-                    <div>
-                        <i class="large material-icons">assignment</i>
-                        <p>REGISTER</p>
-                    </div>
-                </li>
-                <li class="col s6 l2 login">
-                    <div>
-                        <i class="large material-icons">input</i>
-                        <p>LOGIN</p>
-                    </div>
-                </li>
+                {% if is_granted('ROLE_USER') %}
+                    <li class="col s6 l2 register">
+                        <a href="{{ path("fos_user_profile_edit") }}"> 
+                            <div>
+                                <i class="large material-icons">assignment</i>
+                                <p>EDIT</p>
+                            </div>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="col s6 l2 register">
+                        <a href="{{ path("fos_user_registration_register") }}"> 
+                            <div>
+                                <i class="large material-icons">assignment</i>
+                                <p>REGISTER</p>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_USER') %}
+                    <li class="col s6 l2 login">
+                        <a href="{{ path("fos_user_security_logout") }}"> 
+                            <div>
+                                <i class="large material-icons">input</i>
+                                <p>LOGOUT</p>
+                            </div>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="col s6 l2 login">
+                        <a href="{{ path("fos_user_security_login") }}"> 
+                            <div>
+                                <i class="large material-icons">input</i>
+                                <p>LOGIN</p>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
             </ul>
         </ul>
     </nav>
