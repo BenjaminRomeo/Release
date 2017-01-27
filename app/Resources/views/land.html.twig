@@ -6,7 +6,7 @@
 		<title>{% block title %}Bienvenue{% endblock %}</title>
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-				{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled.css'
+				{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/global.css'
 	  				'bundles/main/less/land.less'
 	  				'bundles/main/less/menu.less'
 	  			%}
@@ -23,6 +23,11 @@
         </noscript>
 
         	<div id='masterContainer'>
+        		<div class='navTrigger opened'>
+				    <li class='line'></li>
+				    <li class='line'></li>
+				    <li class='line'></li>
+				</div>
         		<div id='container'>
 	        		{{ include("Global/menu.html.twig") }}
 		        	<div id='main'>
