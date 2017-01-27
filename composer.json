@@ -24,14 +24,15 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "doctrine/doctrine-fixtures-bundle": "~2.3",
         "stof/doctrine-extensions-bundle": "^1.2.2",
-        "symfony/assetic-bundle": "^2.7.1",
+        "symfony/assetic-bundle": "dev-master",
         "leafo/scssphp": "~0.6",
         "patchwork/jsqueeze": "~1.0",
         "leafo/lessphp": "0.3.9",
         "flesler/jquery.scrollto": "*",
         "knplabs/knp-paginator-bundle": "2.5.3",
         "discutea/forum-bundle": "1.0.4",
-        "friendsofsymfony/user-bundle": "dev-master"
+        "friendsofsymfony/user-bundle": "dev-master",
+        "coresphere/console-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

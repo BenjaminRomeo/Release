@@ -1,7 +1,7 @@
 {% extends "ReleaseLandingBundle::layout.html.twig" %}
 
 {% block stylesheets %}
-	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/compiled.css'
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/home.css'
 		'bundles/releaselanding/less/landing.less'
 	%}
 	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
@@ -29,14 +29,15 @@
 				<li>
 					<img src='{{ asset("bundles/releaselanding/img/home.png") }}'> 
 					<div class="caption center-align">
-						<h4 class="light grey-text text-lighten-3">Alexander Savage c'est comme le verglas. <br/> Plus tu en as, plus tu t'étales.</h4>
+						<h3><red>Site en développement</red></h3>
+						<h4 class="light grey-text text-lighten-3">Certaines fonctionnalitées ne sont pas encore disponnibles</h4>
 					</div>
 				</li>
 				<li>
 					<img src='{{ asset("bundles/releaselanding/img/home2.png") }}'> 
 					<div class="caption right-align">
 						<h3>Souvenir, souvenir</h3>
-						<h5 class="light grey-text text-lighten-3">C'est quand l'on se replonge dans le passé que l'on peux envisager l'avenir.</h5>
+						<h5 class="light grey-text text-lighten-3">Ne pas oublier notre Histoire <br/> Pour forger notre Avenir</h5>
 					</div>
 				</li>
 			</ul>
@@ -56,48 +57,48 @@
 					    	<td class="role" colspan="4">HEAL</td>
 					  	</tr>
 					  	<tr>
-					    	<td class="icone">Icone</td>
-					    	<td class="stClose">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">PLD</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone">DRK</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone">SCH</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone">WHM</td>
+					    	<td class="stClose">Fermé</td>
 					  	</tr>
 					  	<tr>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">WAR</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone fade">NONE</td>
+					    	<td class="stOpen fade">Ouvert</td>
+					    	<td class="icone">AST</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone fade">NONE</td>
+					    	<td class="stOpen fade">Ouvert</td>
 					  	</tr>
 					  	<tr>
-					    	<td class="role" colspan="4">MELE</td>
+					    	<td class="role" colspan="4">MELEE</td>
 					    	<td class="role" colspan="4">DISTANT</td>
 					  	</tr>
 					  	<tr>
-					    	<td class="icone">Icone</td>
+					    	<td class="icone">NIN</td>
 					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">MNK</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone">SMN</td>
+					    	<td class="stMaybe">Ouvert</td>
+					    	<td class="icone">BLM</td>
+					    	<td class="stMaybe">Ouvert</td>
 					  	</tr>
 					  	<tr>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
-					    	<td class="icone">Icone</td>
-					    	<td class="stOpen">Ouvert</td>
+					    	<td class="icone">DRG</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone fade">NONE</td>
+					    	<td class="stOpen fade">Ouvert</td>
+					    	<td class="icone">MCH</td>
+					    	<td class="stClose">Fermé</td>
+					    	<td class="icone">BRD</td>
+					    	<td class="stClose">Fermé</td>
 					  	</tr>
 					</table>
 				</div>

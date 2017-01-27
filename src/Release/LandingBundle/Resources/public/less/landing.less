@@ -92,7 +92,7 @@
 
 	.joinUs
 	{
-		right: ~'calc(35% + 30px)';
+		right: ~"calc(35% - -30px)";
 	}
 
 	#navHome
@@ -318,7 +318,7 @@ table
 	line-height: 4px;
 	height: 100%;
 	width: 100%;
-	display: none;
+	display:table;
 
 	th, td
 	{
@@ -327,11 +327,21 @@ table
 
 	.stOpen
 	{
-		color: @green;
+		color: #4fff41;
 	}
 
 	.stClose
 	{
 		color: @red;
+	}
+
+	.stMaybe
+	{
+		color: @orange;
+	}
+
+	.fade
+	{
+		opacity:0;
 	}
 }
