@@ -21,7 +21,8 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Release\LandingBundle\ReleaseLandingBundle(),
-            new Release\UserBundle\ReleaseUserBundle(),
+            new Release\UserBundle\ReleaseUserBundle(), 
+            new FM\BbcodeBundle\FMBbcodeBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

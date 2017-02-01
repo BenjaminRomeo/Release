@@ -32,7 +32,10 @@
         "knplabs/knp-paginator-bundle": "2.5.3",
         "discutea/forum-bundle": "1.0.4",
         "friendsofsymfony/user-bundle": "dev-master",
-        "coresphere/console-bundle": "dev-master"
+        "coresphere/console-bundle": "dev-master",
+        "mjohnson/decoda" : "^6.7",
+        "helios-ag/fm-bbcode-bundle" :"^7.0"
+
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

@@ -126,3 +126,11 @@ fos_user:
     db_driver: orm 
     firewall_name: main
     user_class:    Release\UserBundle\Entity\User 
+
+fm_bbcode:
+      filter_sets:
+        my_default_filter:
+          locale: ru
+          xhtml: true
+          filters: [ default, quote ]
+          whitelist: [ b, quote ]
