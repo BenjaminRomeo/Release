@@ -1,0 +1,43 @@
+@import 'definition.less';
+
+section
+{
+	background: linear-gradient(to bottom, #f1b500, #f17d00);
+	height: 100%;
+	width: 100%;
+
+	.recruitmentContainer
+	{
+		background: url('../img/Team/teamSection.png') no-repeat center bottom;
+		background-size: contain;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.applicationContainer
+	{
+		height: 800px;
+		width: 800px;
+		position: absolute;
+		top: 100px;
+		right: 0;
+		left: 0;
+		margin: auto;
+		border: solid 2px grey;
+		background-color: white;
+		padding: 20px 40px 20px 40px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		
+		.btn {
+			background-color: #f19d00;
+		}
+		
+		div.input-field > label > ul {
+			display: inline-block;
+			color: red;
+			font-style: italic;
+		}
+	}
+}
+

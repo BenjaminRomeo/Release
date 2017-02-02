@@ -1,0 +1,118 @@
+{% extends "ReleaseLandingBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/team.css'
+		'bundles/releaselanding/less/recruitment.less'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block title %}
+	Recrutement 
+{% endblock %}
+
+{% block section %}
+<section>
+	<div class='recruitmentContainer'>
+		<div class='applicationContainer'>
+			<center><h5>Formulaire de recrutement</h5></center>
+			{{ form_start(form,{'method':'POST'}) }}
+				{{ form_widget(form._token) }}
+			
+				<div class="input-field">
+					<label for='form[character_name]'>Nom du personnage {{ form_errors(form.character_name) }}</label>
+					<input type="text" name="form[character_name]" id="form[character_name]" size="25" placeholder="Nom du personnage" required value="{{ form.character_name.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<label for='form[first_name]'>Prénom {{ form_errors(form.first_name) }}</label>
+					<input type="text" name="form[first_name]" id="form[first_name]" size="25" placeholder="Prénom" required value="{{ form.first_name.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<label for='form[age]'>Âge {{ form_errors(form.age) }}</label>
+					<input type="text" name="form[age]" id="form[age]" size="3" maxlength="3" placeholder="Âge" required value="{{ form.age.vars.value }}"/>
+				</div>
+				<label for='form[gender]'>Sexe {{ form_errors(form.gender) }}</label>
+				<p>
+					<input type="radio" name="form[gender]" id="form[gender_m]" checked="checked"/>
+					<label for="form[gender_m]">Homme</label>
+				
+					<input type="radio" name="form[gender]" id="form[gender_f]"/>
+					<label for="form[gender_f]">Femme</label>
+				</p>
+				<div class="input-field">
+					<label for='form[interests]'>Centres d'intérêt {{ form_errors(form.interests) }}</label>
+					<input type="text" name="form[interests]" id="form[interests]" size="50" maxlength="50" placeholder="Centres d'intérêt" required value="{{ form.interests.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<label for='form[availability]'>Disponibilités {{ form_errors(form.availability) }}</label>
+					<input type="text" name="form[availability]" id="form[availability]" size="50" maxlength="50" placeholder="Disponibilités" required value="{{ form.availability.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<textarea id="form[description]" name="form[description]" placeholder="D&eacute;crivez-vous..." class="materialize-textarea" required >{{ form.description.vars.value }}</textarea>
+					<label for='form[description]'>Description {{ form_errors(form.description) }}</label>
+				</div>
+				<div class="input-field">
+					<label for='form[lodestone]'>Lien Lodestone {{ form_errors(form.lodestone) }}</label>
+					<input type="text" name="form[lodestone]" id="form[lodestone]" size="50" maxlength="50" placeholder="http://fr.finalfantasyxiv.com/lodestone/character/4835706/" required value="{{ form.lodestone.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<select multiple name="form[jobs]" id="form[jobs]">
+						<option value="" disabled selected>Choisissez vos jobs</option>
+						<option value="AST">AST</option>
+						<option value="BLM">BLM</option>
+						<option value="BRD">BRD</option>
+						<option value="DRG">DRG</option>
+						<option value="DRK">DRK</option>
+						<option value="MCH">MCH</option>
+						<option value="MNK">MNK</option>
+						<option value="NIN">NIN</option>
+						<option value="PLD">PLD</option>
+						<option value="SCH">SCH</option>
+						<option value="SMN">SMN</option>
+						<option value="WAR">WAR</option>
+						<option value="WHM">WHM</option>
+					</select>
+					<label>Jobs maîtrisés {{ form_errors(form.jobs) }}</label>
+				</div>
+				<div class="input-field">
+					<textarea id="form[gameplay]" name="form[gameplay]" placeholder="D&eacute;crivez votre manière de jouer ..." class="materialize-textarea" required>{{ form.gameplay.vars.value }}</textarea>
+					<label for='form[gameplay]'>Description de votre gameplay {{ form_errors(form.gameplay) }}</label>
+				</div>
+				<div class="input-field">
+					<label for='form[bis_gear]'>Lien de votre BiS {{ form_errors(form.bis_gear) }}</label>
+					<input type="text" name="form[bis_gear]" id="form[bis_gear]" size="50" maxlength="50" placeholder="http://ffxiv.ariyala.com/" required value="{{ form.bis_gear.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<label for='form[current_gear]'>Lien de votre équipement actuel {{ form_errors(form.current_gear) }}</label>
+					<input type="text" name="form[current_gear]" id="form[current_gear]" size="50" maxlength="50" placeholder="http://ffxiv.ariyala.com/" required value="{{ form.current_gear.vars.value }}"/>
+				</div>
+				<div class="input-field">
+					<textarea id="form[experience_games]" name="form[experience_games]" placeholder="D&eacute;crivez votre exp&eacute;rience sur d'autres jeux ..." class="materialize-textarea" required>{{ form.experience_games.vars.value }}</textarea>
+					<label for='form[experience_games]'>Description de votre expérience sur d'autres jeux {{ form_errors(form.experience_games) }}</label>
+				</div>
+				<div class="input-field">
+					<textarea id="form[experience_ffxiv]" name="form[experience_ffxiv]" placeholder="D&eacute;crivez votre exp&eacute;rience PvE/PvP sur FFXIV ..." class="materialize-textarea" required>{{ form.experience_ffxiv.vars.value }}</textarea>
+					<label for='form[experience_ffxiv]'>Description de votre expérience sur FFXIV {{ form_errors(form.experience_ffxiv) }}</label>
+				</div>
+				<div class="input-field">
+					<textarea id="form[previous_guilds]" name="form[previous_guilds]" placeholder="Quelles sont vos précédentes guildes et les raisons de votre départ ..." class="materialize-textarea" required>{{ form.previous_guilds.vars.value }}</textarea>
+					<label for='form[previous_guilds]'>Votre parcours sur FFXIV {{ form_errors(form.previous_guilds) }}</label>
+				</div>
+				<div class="input-field">
+					<textarea id="form[motivation]" name="form[motivation]" placeholder="Pourquoi Release et pourquoi devrions-nous vous recruter ?" class="materialize-textarea" required>{{ form.motivation.vars.value }}</textarea>
+					<label for='form[motivation]'>Motivations {{ form_errors(form.motivation) }}</label>
+				</div>
+				{{ form_widget(form.postuler) }}
+		</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+	{% javascripts filter='?yui_js'
+		'bundles/releaselanding/js/recruitment.js' 
+	%}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}

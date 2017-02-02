@@ -5,3 +5,8 @@ releaseLanding_teamPage:
 releaseLanding_homePage:
     path:    /
     defaults: { _controller: ReleaseLandingBundle:Home:index }
+    
+releaseLanding_recruitmentPage:
+    path:    /recruitment/
+    defaults: { _controller: ReleaseLandingBundle:Home:recruitment }  
+    
