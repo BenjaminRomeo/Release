@@ -1,8 +1,18 @@
 {% extends "DForumBundle::layout.html.twig" %}
 
+{% block stylesheets %}
+	{% stylesheets filter='cssrewrite, lessphp, ?yui_css' output='css/forum.css'
+		'bundles/releaselanding/less/forum.less'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	{% endstylesheets %}
+{% endblock %}
+
 {% block title %}{{ topic.title }}{% endblock %}
 
 {% block body %}
+  <div class="container">
+  <div class="row" id="header"></div>
   <h1 class="text-center">{{ topic.title }}</h1>
   {{ knp_pagination_render(posts) }}
   
@@ -17,7 +27,10 @@
   {% endif %}
 
   <ul class="list-unstyled">
-    {% for post in posts %}{% include 'DForumBundle::Post/single-post.html.twig' %}{% endfor %}
+    {% for post in posts %}
+		<div class="divider"></div>
+		{% include 'DForumBundle::Post/single-post.html.twig' %}
+	{% endfor %}
     {% if postpreview %}{% include 'DForumBundle::Post/preview-post.html.twig' %}{% endif %}
     {% if is_granted('CanEditTopic', topic) %}{% include 'DForumBundle::label.html.twig' %}{% endif %}
   </ul>
@@ -31,4 +44,5 @@
     {% endif %}
     {% include 'DForumBundle::Form/Post.html.twig' %}
   {% endif %}
+  </div>
 {% endblock %}
