@@ -27,7 +27,7 @@
 						<p>{{ forum.description }}</p>
 					</div>
 					<div class="col s2">
-						{% set lastTopic = dfLastTopicInForum(forum) %}
+						{% set lastTopic = dfLastTopicInForum(forum,is_apply,currentUser) %}
 						{% if lastTopic is not null %}
 							{% if lastTopic.posts.last.poster is not null %}
 							  {% set username = lastTopic.posts.last.poster.username %}
