@@ -13,6 +13,7 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /vendor/
+!vendor/discutea/*
 /web/bundles/
 
 var/cache/.gitkeep
