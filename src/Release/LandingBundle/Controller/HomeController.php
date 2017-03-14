@@ -91,7 +91,7 @@ class HomeController extends Controller
 			
 			// Post creation
 			$post = new Post();
-			$post->setContent("Je suis\nun\ntest");
+			$post->setContent($this->render('ReleaseLandingBundle:Home:recruitInfo.html.twig', array('recruitment' => $recruitment))->getContent());
 			$post->setTopic($topic);
 			$post->setPoster($topic->getUser());
 			
